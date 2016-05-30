@@ -215,7 +215,7 @@
 
         以下内容完全基于在Seismic项目的Liveshare team的*短短*一个月时间，*仅仅*从前端的角度的所看所想。因此，难免视野有限，以偏概全；对于长期献身项目，对项目本身和团队有深刻认识的人来说，可能有些肤浅，还请谅解。
 
-    &gt;我觉得团队的前端开发效率有点低。
+    &gt; 我觉得团队的前端开发效率有点低。
 
             可能是由于项目启动时间较早的原因，使得目前项目的开发方式任然是大约五年前的方式————业务需求以功能实现为主导，对交互、视觉、用户体验的考虑较少。以至于前端开发严重依赖于server端，server端出现的任何状况都可能阻塞前端开发。而在开发过程
             中，server出现状况几乎是不可避免的，这很大程度上使得前端不得不放下手中工作，来和server进行沟通，甚至直接学习后端知识，自己动手丰衣足食。
@@ -224,12 +224,12 @@
                 我觉得有通过一些简单的调整，借助一些工具就可能较大程度上提高前端的开发效率和开发质量，这是值得的。
 
                     基于这两点，有了以下的内容。
-                &gt;&gt;1、解除前后端的耦合，通过restful接口定义server服务
-                &gt;&gt;2、通过html模板来生成页面UI，而非通过aspx等传统依赖server端的模板(实际上在LiveSend中有些部分已经采用了这种方式)
-                &gt;&gt;3、为了保证和server同步开发，在定义好api后可以利用node.js+mockjs等解决方案并行开发
-                &gt;&gt;4、在提供交互和视觉时，能够提供更加准确、清晰、无歧义的需求(有很多工具可以方便的做到这一点)
+                &gt;&gt; 1、解除前后端的耦合，通过restful接口定义server服务
+                &gt;&gt; 2、通过html模板来生成页面UI，而非通过aspx等传统依赖server端的模板(实际上在LiveSend中有些部分已经采用了这种方式)
+                &gt;&gt; 3、为了保证和server同步开发，在定义好api后可以利用node.js+mockjs等解决方案并行开发
+                &gt;&gt; 4、在提供交互和视觉时，能够提供更加准确、清晰、无歧义的需求(有很多工具可以方便的做到这一点)
 
-                &gt;LiveShare这边的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：
+                &gt; LiveShare这边的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：
 
                 在LiveSendAppMainVM.js中
                 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">liveSendServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line"><span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure>
@@ -238,15 +238,15 @@
 
                 可以定义一些Model对象，对这些数据进行存储，在ViewModel里直接从封装好的Model获取数据。如果模块比较复杂的时候，这样做对于提高代码的可读性还是有必要的。
 
-                &gt;整个代码几乎没有注释和日志，影响可读性，对于刚接触代码的人，增加了熟悉代码的时间成本
+                &gt; 整个代码几乎没有注释和日志，影响可读性，对于刚接触代码的人，增加了熟悉代码的时间成本
 
-                &gt;以下是这个月中发现的自己的一些问题
+                &gt; 以下是这个月中发现的自己的一些问题
 
-                &gt;&gt;编程时的严谨度与公司的要求有差距。
+                &gt;&gt; 编程时的严谨度与公司的要求有差距。
 
                 由于以前的工作习惯，经常要在短期内完成大量功能，常常忙于完成功能，忽略了一些corner situation,导致提交后问题很多。在Seismic看似工作量不大，但是对代码要求更高，需要我不断提高对代码的责任心。
 
-                &gt;&gt;喜欢关注结构、框架等抽象问题，对于具体业务细节常常囫囵吞枣
+                &gt;&gt; 喜欢关注结构、框架等抽象问题，对于具体业务细节常常囫囵吞枣
 
                 今天看了几个小时LiveSend的代码，走之前D同学问我打开LiveSend时，都请求server哪几个接口，我对着代码也没有回答出来，真是惭愧。
 
