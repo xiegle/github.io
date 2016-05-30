@@ -227,9 +227,9 @@
 <p>LiveShare的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：</p>
 <p>在LiveSendAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">liveSendServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">liveSendServiceHelper.openLiveSendInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
 <p>可以定义一些Model对象，对这些数据进行存储，在ViewModel里直接从封装好的Model获取数据。如果模块比较复杂的时候，这样做对于提高代码的可读性还是有必要的。</p>
-<blockquote>
-<blockquote>
 <p>整个代码几乎没有注释和日志，影响可读性，对于刚接触代码的人，增加了熟悉代码的时间成本</p>
 </blockquote>
 </blockquote>

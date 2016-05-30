@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="很快，在西安Seismic团队就要一个月了。将这一个月的感受记录下来，一方面为了完成上级的任务，另一方面也帮助自己在新的环境中，清楚自己需要成长的是什么，能够给团队带来什么。
 以下内容完全基于在Seismic项目的Liveshare team的短短一个月时间，仅仅从前端的角度的所看所想。因此，难免视野有限，以偏概全；对于长期献身项目，对项目本身和团队有深刻认识的人来说，可能有些肤浅，还请谅解。">
-<meta property="og:updated_time" content="2016-05-30T15:58:33.665Z">
+<meta property="og:updated_time" content="2016-05-30T16:02:24.421Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="In Seismic,Xi'an">
 <meta name="twitter:description" content="很快，在西安Seismic团队就要一个月了。将这一个月的感受记录下来，一方面为了完成上级的任务，另一方面也帮助自己在新的环境中，清楚自己需要成长的是什么，能够给团队带来什么。
@@ -236,9 +236,9 @@
 <p>LiveShare的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：</p>
 <p>在LiveSendAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">liveSendServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">liveSendServiceHelper.openLiveSendInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
 <p>可以定义一些Model对象，对这些数据进行存储，在ViewModel里直接从封装好的Model获取数据。如果模块比较复杂的时候，这样做对于提高代码的可读性还是有必要的。</p>
-<blockquote>
-<blockquote>
 <p>整个代码几乎没有注释和日志，影响可读性，对于刚接触代码的人，增加了熟悉代码的时间成本</p>
 </blockquote>
 </blockquote>
