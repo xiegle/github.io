@@ -259,7 +259,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/30/In-Seismic-Xi-an/">In Seismic,Xi&#39;an</a>
+      <a class="article-title" href="/2016/05/30/In-Seismic-Xi-an/">In S,Xi&#39;an</a>
     </h1>
   
 
@@ -268,8 +268,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>很快，在西安Seismic团队就要一个月了。将这一个月的感受记录下来，一方面为了完成上级的任务，另一方面也帮助自己在新的环境中，清楚自己需要成长的是什么，能够给团队带来什么。</p>
-<p>以下内容完全基于在Seismic项目的Liveshare team的<em>短短</em>一个月时间，<em>仅仅</em>从前端的角度的所看所想。因此，难免视野有限，以偏概全；对于长期献身项目，对项目本身和团队有深刻认识的人来说，可能有些肤浅，还请谅解。</p>
+        <p>很快，在西安S团队就要一个月了。将这一个月的感受记录下来，一方面为了完成上级的任务，另一方面也帮助自己在新的环境中，清楚自己需要成长的是什么，能够给团队带来什么。</p>
+<p>以下内容完全基于在S项目的LS team的<em>短短</em>一个月时间，<em>仅仅</em>从前端的角度的所看所想。因此，难免视野有限，以偏概全；对于长期献身项目，对项目本身和团队有深刻认识的人来说，可能有些肤浅，还请谅解。</p>
 <blockquote>
 <p>前端开发效率有点低。</p>
 </blockquote>
@@ -278,12 +278,12 @@
 <p>基于这两点，有了以下的内容。</p>
 <blockquote>
 <blockquote>
-<p>1、解除前后端的耦合，通过restful接口定义server服务<br>2、通过html模板来生成页面UI，而非通过aspx等传统依赖server端的模板(实际上在LiveSend中有些部分已经采用了这种方式)<br>3、为了保证和server同步开发，在定义好api后可以利用node.js+mockjs等解决方案并行开发<br>4、在提供交互和视觉时，能够提供更加准确、清晰、无歧义的需求(有很多工具可以方便的做到这一点)</p>
+<p>1、解除前后端的耦合，通过restful接口定义server服务<br>2、通过html模板来生成页面UI，而非通过aspx等传统依赖server端的模板(实际上在LS中有些部分已经采用了这种方式)<br>3、为了保证和server同步开发，在定义好API后可以利用node.js+mockjs等解决方案并行开发<br>4、在提供交互和视觉时，能够提供更加准确、清晰、无歧义的需求(有很多工具可以方便的做到这一点)</p>
 </blockquote>
 </blockquote>
-<p>LiveShare的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：</p>
-<p>在LiveSendAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">liveSendServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">liveSendServiceHelper.openLiveSendInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
+<p>LS的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：</p>
+<p>在LSAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">lSServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">lSServiceHelper.openLSInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <blockquote>
 <p>可以定义一些Model对象，对这些数据进行存储，在ViewModel里直接从封装好的Model获取数据。如果模块比较复杂的时候，这样做对于提高代码的可读性还是有必要的。</p>
@@ -294,12 +294,13 @@
 <blockquote>
 <p>编程时的严谨度与公司的要求有差距。</p>
 </blockquote>
-<p>由于以前的工作习惯，经常要在短期内完成大量功能，常常忙于完成功能，忽略了一些corner situation,导致提交后问题很多。在Seismic看似工作量不大，但是对代码要求更高，需要我不断提高对代码的责任心。</p>
+<p>由于以前的工作习惯，经常要在短期内完成大量功能，常常忙于完成功能，忽略了一些corner situation,导致提交后问题很多。在S看似工作量不大，但是对代码要求更高，需要我不断提高对代码的责任心。</p>
 <blockquote>
 <p>喜欢关注结构、框架等抽象问题，对于具体业务细节常常囫囵吞枣</p>
 </blockquote>
-<p>今天看了几个小时LiveSend的代码，走之前D同学问我打开LiveSend时，都请求server哪几个接口，我对着代码也没有回答出来，真是惭愧。</p>
+<p>今天看了几个小时LS的代码，走之前D同学问我打开LS时，都请求server哪几个接口，我对着代码也没有准确回答出来，真是惭愧。</p>
 <p>后来反思，觉得自己确实常常对business的细节，业务的流程等实质内容漠不关心，觉得差不多就是那样，这在代码开发中是大忌。以后工作中要常常提醒自己更加细致认真。</p>
+<p>以上。本来想写更多关于O公司，关于S team一些个人认为很赞的方面，可是R领导不让写 :-)</p>
 
       
     </div>
