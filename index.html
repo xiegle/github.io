@@ -282,8 +282,8 @@
 </blockquote>
 </blockquote>
 <p>LS的代码，由于功能不是特别多，还是比较清晰的。个人觉得如果面向对象更彻底一些，能够将Model和ViewModel分离就更好了。举个栗子：</p>
-<p>在LSAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">lSServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">lSServiceHelper.openLSInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
+<p>在LSAppMainVM.js中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// after some code ......</span></span><br><span class="line">LSServiceHelper.getInvitationInfo(<span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// to get data from result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// .......</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//......</span></span><br><span class="line">LSServiceHelper.openLSInvitation(password, user, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// get data form result</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//......</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <blockquote>
 <p>可以定义一些Model对象，对这些数据进行存储，在ViewModel里直接从封装好的Model获取数据。如果模块比较复杂的时候，这样做对于提高代码的可读性还是有必要的。</p>
@@ -300,7 +300,7 @@
 </blockquote>
 <p>今天看了几个小时LS的代码，走之前D同学问我打开LS时，都请求server哪几个接口，我对着代码也没有准确回答出来，真是惭愧。</p>
 <p>后来反思，觉得自己确实常常对business的细节，业务的流程等实质内容漠不关心，觉得差不多就是那样，这在代码开发中是大忌。以后工作中要常常提醒自己更加细致认真。</p>
-<p>以上。本来想写更多关于O公司，关于S team一些个人认为很赞的方面，可是R领导不让写 :-)</p>
+<p>#6 以上。本来想写更多关于O公司，关于S team一些个人认为很赞的方面，可是R领导不让写 :-)</p>
 
       
     </div>
